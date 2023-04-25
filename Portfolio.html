@@ -16,28 +16,67 @@
         <!-- STYLE CSS-->
         <style>
             .buttons{
+                display: grid;
                 grid-template-columns: (6, 1fr);
                 grid-template-rows: 1fr;
+                grid-template-areas:'home about resume portfolio projects contacts';
                 gap: 10px;
+                position: sticky;
+                padding-top: 10px;
+                padding-left: 5px;
+                padding-right: 5px;
+                padding-bottom: 5px;
+                background-color: blueviolet;
             }
             .btnStyle{
                 background-color: black;
                 color: white;
-                border-radius: 10%;
+                border-radius: 25%;
+                text-align: center;
             }
+            .btnStyle:hover{background-color: #00008B;}
         </style>
 
     </head>
 
     <body>
         
-        <div class="buttons">
+        <div class="buttons shadow-lg p-3 mb-5 bg-body-tertiary rounded">
             <div class="home btnStyle"> HOME </div>
             <div class="about btnStyle"> ABOUT </div>
             <div class="resume btnStyle"> RESUME </div>
             <div class="portfolio btnStyle"> PORTFOLIO </div>
             <div class="projects btnStyle"> PROJECTS </div>
             <div class="contacts btnStyle"> CONTACTS </div>
+        </div>
+
+        <div class="chome">
+            
+
+        </div>
+        
+        <div class="cabout">
+            
+
+        </div>
+
+        <div class="cresume">
+            
+
+        </div>
+
+        <div class="cportfolio">
+
+        <div class="cprojects">
+            
+
+        </div>
+        
+        <div class="ccontacts">
+            
+
+        </div>
+
         </div>
 
         <!-- Bootstrap Javascript-->
