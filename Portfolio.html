@@ -5,6 +5,7 @@
 
         <title>Moussa's Portfolio</title>
         <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link
         href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap"
@@ -15,7 +16,8 @@
         <!-- Google icones -->
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,300,1,0" />
-        
+        <!-- Awesome-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <!-- w3schools CSS Link-->
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
         <!-- STYLE CSS-->
@@ -38,10 +40,10 @@
 
             }
 
-           /* img{
+            img{
                 width: 100%;
                 height: auto;
-            } */
+            }
 
             .cabout{
                 display: grid;
@@ -56,11 +58,6 @@
                 padding-right: 50px;
                 padding-bottom: 15px; */
                 background-color: white;
-            }
-
-            .contacts{
-                background-image: url(contacts-bacgound-img.jpg);
-                background-color: blue;
             }
 
             .ccontacts{
@@ -84,9 +81,35 @@
                 'picture profile aboutme'; */
             }
 
-            .cprojects{
-                background-image: url(project-background-img.jpg);
+           /*
+            .contacts{
+                background-image: url(contacts-bacgound-img.jpg);
+                background-color: blue;
             }
+
+           .cprojects{
+                background-image: url(project-background-img.jpg);
+                width: 100%;
+                height: auto;
+            } */
+
+            .bg-image {
+                /* Full height */
+                height: 50%; 
+                    
+                /* Center and scale the image nicely */
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-attachment: fixed;
+            }
+
+            .img1 { background-image: url("img_snow.jpg"); }
+            .img2 { background-image: url("img_girl.jpg"); }
+            .img3 { background-image: url("img_lights.jpg"); }
+            .img4 { background-image: url("portfolio-background-img.jpg"); }
+            .img5 { background-image: url("project-background-img.jpg"); }
+            .img6 { background-image: url("contacts-bacgound-img.jpg"); }
 
             .btnStyle{
                 background-color: black;
@@ -102,6 +125,21 @@
                 text-decoration-color: Blue;
                 text-decoration-thickness: 10px;
             }
+
+            /* Style buttons */
+            .btn-download {
+            background-color: DodgerBlue;
+            border: none;
+            color: white;
+            padding: 12px 30px;
+            cursor: pointer;
+            font-size: 20px;
+            }
+
+            /* Darker background on mouse-over */
+            .btn-download:hover {
+            background-color: RoyalBlue;
+            }   
 
             .btnsubmit:hover{border-color: gray;}
 
@@ -122,22 +160,46 @@
         
         <!-- BUTTONS -->
         <div class="buttons">
-            <div class="btnhome btnStyle" grid-area="home" ><button type="button" class="btn btn-dark">HOME</button></div>
-            <div class="btnabout btnStyle" grid-area="about"><button type="button" class="btn btn-dark">ABOUT</button></div>
-            <div class="btnresume btnStyle" grid-area="resume"><button type="button" class="btn btn-dark">RESUME</button></div>
-            <div class="btnportfolio btnStyle" grid-area="portfolio"><button type="button" class="btn btn-dark">PORTFOLIO</button></div>
-            <div class="btnprojects btnStyle" grid-area="projects"><button type="button" class="btn btn-dark">PROJECTS</button></div>
-            <div class="btncontacts btnStyle" grid-area="contacts"><button type="button" class="btn btn-dark">CONTACTS</button></div>
+            <div class="btnhome btnStyle" grid-area="home">
+                <button type="button" class="btn btn-dark" onClick="home()">
+                    HOME
+                </button>
+            </div>
+            <div class="btnabout btnStyle" grid-area="about">
+                <button type="button" class="btn btn-dark" onClick="about()">
+                    ABOUT
+                </button>
+            </div>
+            <div class="btnresume btnStyle" grid-area="resume">
+                <button type="button" class="btn btn-dark" onClick="resume()">
+                    RESUME
+                </button>
+            </div>
+            <div class="btnportfolio btnStyle" grid-area="portfolio">
+                <button type="button" class="btn btn-dark" onClick="resume()">
+                    PORTFOLIO
+                </button>
+            </div>
+            <div class="btnprojects btnStyle" grid-area="projects">
+                <button type="button" class="btn btn-dark" onClick="projects()">
+                    PROJECTS
+                </button>
+            </div>
+            <div class="btncontacts btnStyle" grid-area="contacts">
+                <button type="button" class="btn btn-dark" onClick="contacts()">
+                    CONTACTS
+                </button>
+            </div>
         </div>
 
         <!-- HOME -->
-        <div class="chome">
-            <img src="pic1.jpg" alt="" width="1280" height="1280">
+        <div class="chome" id="home">
+            <img src="pic1.jpg" alt="Home picture bacground">
 
         </div>
 
         <!-- ABOUT -->
-        <div class="about">
+        <div class="about" id="about">
             
             <div class="cabout shadow-lg p-3 mb-5 bg-body-tertiary rounded">
                 <div class="picture" grid-area="picture">
@@ -203,13 +265,17 @@
         </div>
 
         <!-- RESUME -->
-        <div class="cresume">
-            
+        <div class="cresume" id="resume">
+
+            <h1 class="underline" style="text-align: center;"><b>RESUME</b></h1>
+            <a href="MOUSSA_FOFANA_RESUME.docx" download="">
+                <button class="btn-download" style="width:100%"><i class="fa fa-download"></i> Download Resume</button>
+            </a>
 
         </div>
 
         <!-- PORTFOLIO -->
-        <div class="cportfolio">
+        <div class="cportfolio img4 bg-image" id="portfolio">
 
             <h1 class="underline" style="text-align: center;"><b>PORTFOLIO</b></h1>
             <div></div>
@@ -220,14 +286,14 @@
         </div>
 
         <!-- PROJECTS -->
-        <div class="cprojects">
+        <div class="cprojects img5 bg-image" id="projects">
 
             <h1 class="underline" style="text-align: center;"><b>PROJECTS</b></h1>
 
         </div>
         
         <!-- CONTACTS -->
-        <div class="contacts">
+        <div class="contacts img6 bg-image" id="contacts">
             <div class="ccontacts">
 
                 <h1 class="underline" style="text-align: center;"><b>CONTATCS</b></h1>
@@ -299,7 +365,28 @@
         integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
         <!-- Font Awesome for icones-->
         <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
-    
+        
+        <script>
+
+            function home()
+            {document.getElementById('home').scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" })}
+
+            function about()
+            {document.getElementById('about').scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" })}
+
+            function resume()
+            {document.getElementById('resume').scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" })}
+
+            function portfolio()
+            {document.getElementById('portfolio').scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" })}
+
+            function projects()
+            {document.getElementById('projects').scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" })}
+
+            function contacts()
+            {document.getElementById('contacts').scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" })}
+
+        </script>
     </body>
 
     <footer>
