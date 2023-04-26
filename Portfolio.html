@@ -24,15 +24,24 @@
                 display: grid;
                 grid-template-columns: (6, 1fr);
                 grid-template-rows: 1fr;
-                grid-template-areas:'home about resume portfolio projects contacts';
+                grid-template-areas:'btnhome mbtnabout btnresume btnportfolio btnprojects btncontacts';
                 gap: 10px;
                 position: sticky;
                 padding-top: 10px;
                 padding-left: 5px;
                 padding-right: 5px;
-                padding-bottom: 5px;
-                background-color: blueviolet;
+                padding-bottom: 15px;
+                background-color: black;
             }
+
+            .chome{
+
+            }
+
+           /* img{
+                width: 100%;
+                height: auto;
+            } */
 
             .cabout{
                 display: grid;
@@ -41,11 +50,17 @@
                 gap: 10px;
                 grid-template-areas:
                 'picture profile aboutme';
-                padding-top: 15px;
+                
+                /* padding-top: 15px;
                 padding-left: 50px;
                 padding-right: 50px;
-                padding-bottom: 15px;
+                padding-bottom: 15px; */
                 background-color: white;
+            }
+
+            .contacts{
+                background-image: url(contacts-bacgound-img.jpg);
+                background-color: blue;
             }
 
             .ccontacts{
@@ -55,7 +70,9 @@
                 gap: 10px;
                 /* grid-template-areas:
                 'picture profile aboutme'; */
-                background-color: white; 
+                
+                padding-bottom: 25px; 
+                padding: 50px;
             }
 
             .sndcontact{
@@ -65,6 +82,10 @@
                 gap: 20px;
                 /* grid-template-areas:
                 'picture profile aboutme'; */
+            }
+
+            .cprojects{
+                background-image: url(project-background-img.jpg);
             }
 
             .btnStyle{
@@ -84,86 +105,100 @@
 
             .btnsubmit:hover{border-color: gray;}
 
+            footer{
+                background-color: blue;
+                padding-bottom: 20px;
+            } 
+
+            .copyright{padding-left: 35%;}
+
         </style>
 
     </head>
 
+    <!-- BODY -->
+    <!-- --------------- -->
     <body>
         
-        <div class="buttons shadow-lg p-3 mb-5 bg-body-tertiary rounded">
-            <div class="home btnStyle" grid-area="home" ><button type="button" class="btn btn-dark">HOME</button></div>
-            <div class="about btnStyle" grid-area="about"><button type="button" class="btn btn-dark">ABOUT</button></div>
-            <div class="resume btnStyle" grid-area="resume"><button type="button" class="btn btn-dark">RESUME</button></div>
-            <div class="portfolio btnStyle" grid-area="portfolio"><button type="button" class="btn btn-dark">PORTFOLIO</button></div>
-            <div class="projects btnStyle" grid-area="projects"><button type="button" class="btn btn-dark">PROJECTS</button></div>
-            <div class="contacts btnStyle" grid-area="contacts"><button type="button" class="btn btn-dark">CONTACTS</button></div>
+        <!-- BUTTONS -->
+        <div class="buttons">
+            <div class="btnhome btnStyle" grid-area="home" ><button type="button" class="btn btn-dark">HOME</button></div>
+            <div class="btnabout btnStyle" grid-area="about"><button type="button" class="btn btn-dark">ABOUT</button></div>
+            <div class="btnresume btnStyle" grid-area="resume"><button type="button" class="btn btn-dark">RESUME</button></div>
+            <div class="btnportfolio btnStyle" grid-area="portfolio"><button type="button" class="btn btn-dark">PORTFOLIO</button></div>
+            <div class="btnprojects btnStyle" grid-area="projects"><button type="button" class="btn btn-dark">PROJECTS</button></div>
+            <div class="btncontacts btnStyle" grid-area="contacts"><button type="button" class="btn btn-dark">CONTACTS</button></div>
         </div>
 
+        <!-- HOME -->
         <div class="chome">
-
+            <img src="pic1.jpg" alt="" width="1280" height="1280">
 
         </div>
-        
+
         <!-- ABOUT -->
-        <div class="cabout shadow-lg p-3 mb-5 bg-body-tertiary rounded">
-            <div class="picture" grid-area="picture">
-                <img src="#" alt="#">
-            </div>
+        <div class="about">
+            
+            <div class="cabout shadow-lg p-3 mb-5 bg-body-tertiary rounded">
+                <div class="picture" grid-area="picture">
+                    <img src="#" alt="#">
+                </div>
 
-            <div class="profile" grid-area="profile">
-                <p><b>Name</b>: Moussa Fofana</p>
-                <p><b>Profile</b>: Electrical & Electronic Engineer, Full stack
-                    developer</p>
-                <p><b>Email</b>: fofanamoussa71@gmail.com</p>
-                <p><b>Phone</b>: (215) 869-1480</p>
-            </div>
+                <div class="profile" grid-area="profile">
+                    <p><b>Name</b>: Moussa Fofana</p>
+                    <p><b>Profile</b>: Electrical & Electronic Engineer, Full stack
+                        developer</p>
+                    <p><b>Email</b>: fofanamoussa71@gmail.com</p>
+                    <p><b>Phone</b>: (215) 869-1480</p>
+                </div>
 
-            <div class="aboutme" style="grid-area: aboutme;">
-                <h2 class="underline">About me</h2>
-                <br>
-                <p style="text-align:left">
-                    Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. <br>
-                    Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. <br>
-                    Praesent sapien massa, convallis a pellentesque nec, egestas non <br>
-                    nisi. Nulla porttitor accumsan tincidunt. Mauris blandit aliquet <br>
-                    elit, eget tincidunt nibh pulvinar a. Vivamus suscipit tortor eget <br>
-                    felis porttitor volutpat. Vestibulum ac diam sit amet quam <br>
-                    vehicula elementum sed sit amet dui. porttitor at sem. 
-                    Nulla porttitor accumsan tincidunt. Quisque velit nisi, pretium ut <br>
-                    lacinia in, elementum id enim. Nulla porttitor accumsan tincidunt. <br>
-                    Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a.
-                
-                </p>
-            </div>
+                <div class="aboutme" style="grid-area: aboutme;">
+                    <h2 class="underline">About me</h2>
+                    <br>
+                    <p style="text-align:left">
+                        Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. <br>
+                        Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. <br>
+                        Praesent sapien massa, convallis a pellentesque nec, egestas non <br>
+                        nisi. Nulla porttitor accumsan tincidunt. Mauris blandit aliquet <br>
+                        elit, eget tincidunt nibh pulvinar a. Vivamus suscipit tortor eget <br>
+                        felis porttitor volutpat. Vestibulum ac diam sit amet quam <br>
+                        vehicula elementum sed sit amet dui. porttitor at sem. 
+                        Nulla porttitor accumsan tincidunt. Quisque velit nisi, pretium ut <br>
+                        lacinia in, elementum id enim. Nulla porttitor accumsan tincidunt. <br>
+                        Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a.
+                    
+                    </p>
+                </div>
 
-            <div class="skill" grid-area="skill">
-                <h3 class="underline">SKILLS</h2>
-                <br>
-    
-                <h5>HTML</h4>
-                    <div class="w3-light-grey w3-round-xlarge">
-                        <div class="w3-container w3-blue w3-round-xlarge" style="width:25%">25%</div>
-                    </div>
+                <div class="skill" grid-area="skill">
+                    <h3 class="underline">SKILLS</h2>
+                    <br>
+        
+                    <h5>HTML</h4>
+                        <div class="w3-light-grey w3-round-xlarge">
+                            <div class="w3-container w3-blue w3-round-xlarge" style="width:25%">25%</div>
+                        </div>
 
-                <h5>CSS</h4>
-                    <div class="w3-light-grey w3-round-xlarge">
-                        <div class="w3-container w3-blue w3-round-xlarge" style="width:25%">25%</div>
-                    </div>
+                    <h5>CSS</h4>
+                        <div class="w3-light-grey w3-round-xlarge">
+                            <div class="w3-container w3-blue w3-round-xlarge" style="width:25%">25%</div>
+                        </div>
 
-                <h5>JAVASCRIPT</h4>
-                    <div class="w3-light-grey w3-round-xlarge">
-                        <div class="w3-container w3-blue w3-round-xlarge" style="width:25%">25%</div>
-                    </div>
+                    <h5>JAVASCRIPT</h4>
+                        <div class="w3-light-grey w3-round-xlarge">
+                            <div class="w3-container w3-blue w3-round-xlarge" style="width:25%">25%</div>
+                        </div>
 
-                <h5>PYTHON</h4>
-                    <div class="w3-light-grey w3-round-xlarge">
-                        <div class="w3-container w3-blue w3-round-xlarge" style="width:25%">25%</div>
-                    </div>
+                    <h5>PYTHON</h4>
+                        <div class="w3-light-grey w3-round-xlarge">
+                            <div class="w3-container w3-blue w3-round-xlarge" style="width:25%">25%</div>
+                        </div>
 
-                <h5>C#/C++</h4>
-                    <div class="w3-light-grey w3-round-xlarge">
-                        <div class="w3-container w3-blue w3-round-xlarge" style="width:25%">25%</div>
-                    </div>
+                    <h5>C#/C++</h4>
+                        <div class="w3-light-grey w3-round-xlarge">
+                            <div class="w3-container w3-blue w3-round-xlarge" style="width:25%">25%</div>
+                        </div>
+                </div>
             </div>
         </div>
 
@@ -184,74 +219,79 @@
 
         </div>
 
+        <!-- PROJECTS -->
         <div class="cprojects">
 
             <h1 class="underline" style="text-align: center;"><b>PROJECTS</b></h1>
 
         </div>
         
-        <div class="ccontacts">
+        <!-- CONTACTS -->
+        <div class="contacts">
+            <div class="ccontacts">
 
-            <h1 class="underline" style="text-align: center;"><b>CONTATCS</b></h1>
+                <h1 class="underline" style="text-align: center;"><b>CONTATCS</b></h1>
 
-            <div class="sndcontact">
+                <div class="sndcontact">
 
-                <div class="sendmessage">
-                    <h4 class="underline"><b>Send a Message</b></h4>
-                    <br>
-                    <div class="mb-3">
-                        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Your Name">
+                    <div class="sendmessage">
+                        <h4 class="underline"><b>Send a Message</b></h4>
+                        <br>
+                        <div class="mb-3">
+                            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Your Name">
+                        </div>
+
+                        <div class="mb-3">
+                            <input type="email" class="form-control" id="formGroupExampleInput2" placeholder="Your Email@">
+                        </div>
+
+                        <div class="mb-3">
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Subject">
+                        </div>
+
+                        <div class="form-floating">
+                            <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+                            <label for="floatingTextarea2">Message</label>
+                        </div>
+                        <br>
+                        <div style="padding-left: 35%;">
+                            <button type="submit" class="btn btn-primary btnsubmit" style="height: 50px; width: 125px;">
+                                <h4>Submit</h4>
+                            </button>
+                        </div>
                     </div>
 
-                    <div class="mb-3">
-                        <input type="email" class="form-control" id="formGroupExampleInput2" placeholder="Your Email@">
-                    </div>
+                    <div class="getintouch">
 
-                    <div class="mb-3">
-                        <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Subject">
-                    </div>
+                        <h4 class="underline"><b>Get in Touch</b></h4>
+                        <br>
+                        <div>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. <br>
+                                Facilis dolorum dolorem soluta quidem expedita aperiam <br>
+                                aliquid at. Totam magni ipsum suscipit amet? Autem nemo <br>
+                                esse laboriosam ratione nobis mollitia inventore?
+                            </p>
+                        </div>
 
-                    <div class="form-floating">
-                        <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
-                        <label for="floatingTextarea2">Message</label>
-                    </div>
-                    <br>
-                    <div style="padding-left: 35%;">
-                        <button type="submit" class="btn btn-primary btnsubmit" style="height: 50px; width: 125px;">
-                            <h4>Submit</h4>
-                        </button>
-                    </div>
-                </div>
+                        <span class="material-symbols-outlined">
+                            location_on
+                        </span> <i>Philadelphia, PA</i>
+                        <br>
+                        <span class="material-symbols-outlined">
+                            smartphone
+                        </span> <i>+1(215) 869 1480</i>
+                        <br>
+                        <span class="material-symbols-outlined">
+                            alternate_email
+                        </span> <i>fofanamoussa71@gmail.com</i>
 
-                <div class="getintouch">
-
-                    <h4 class="underline"><b>Get in Touch</b></h4>
-                    <br>
-                    <div>
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. <br>
-                            Facilis dolorum dolorem soluta quidem expedita aperiam <br>
-                            aliquid at. Totam magni ipsum suscipit amet? Autem nemo <br>
-                            esse laboriosam ratione nobis mollitia inventore?
-                        </p>
                     </div>
-
-                    <span class="material-symbols-outlined">
-                        location_on
-                    </span> <i>Philadelphia, PA</i>
-                    <br>
-                    <span class="material-symbols-outlined">
-                        smartphone
-                    </span> <i>+1(215) 869 1480</i>
-                    <br>
-                    <span class="material-symbols-outlined">
-                        alternate_email
-                    </span> <i>fofanamoussa71@gmail.com</i>
 
                 </div>
 
             </div>
-
+                
         </div>
 
         <!-- Bootstrap Javascript-->
@@ -265,11 +305,12 @@
     <footer>
 
         <br>
-        <span class="material-symbols-outlined">
+        <span class="material-symbols-outlined copyright">
             copyright
         </span> <i> Copyright <b>Moussa Fofana</b>. All Rights Reserved</i>
-        <p>Design by Moussa</p>
+        <p style="text-align: center;">Design by Moussa</p>
 
+        <a href="http://armonkplayers.org#anchor"><input type="button" value="Test"></a>
     </footer>
 
 </html>
