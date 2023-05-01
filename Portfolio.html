@@ -20,6 +20,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <!-- w3schools CSS Link-->
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
         <!-- STYLE CSS-->
         <style>
             .buttons{
@@ -28,12 +29,17 @@
                 grid-template-rows: 1fr;
                 grid-template-areas:'btnhome mbtnabout btnresume btnportfolio btnprojects btncontacts';
                 gap: 10px;
-                position: sticky;
+                
                 padding-top: 10px;
                 padding-left: 5px;
                 padding-right: 5px;
                 padding-bottom: 15px;
                 background-color: black;
+
+                position: fixed;
+                left:0;
+                right:0;
+                top:0;
             }
 
             .chome{
@@ -96,7 +102,6 @@
             .bg-image {
                 /* Full height */
                 height: 50%; 
-                    
                 /* Center and scale the image nicely */
                 background-position: center;
                 background-repeat: no-repeat;
@@ -104,21 +109,25 @@
                 background-attachment: fixed;
             }
 
-            .img1 { background-image: url("img_snow.jpg"); }
-            .img2 { background-image: url("img_girl.jpg"); }
-            .img3 { background-image: url("img_lights.jpg"); }
+            /*.img1 { background-image: url("img_snow.jpg"); }
+            .img2 { background-image: url("img_girl.jpg"); } */
+            .img3 { background-image: url("resume-background-img.jpg"); }
             .img4 { background-image: url("portfolio-background-img.jpg"); }
             .img5 { background-image: url("project-background-img.jpg"); }
             .img6 { background-image: url("contacts-bacgound-img.jpg"); }
 
             .btnStyle{
-                background-color: black;
+                
                 color: white;
-                border-radius: 25%;
+                
                 text-align: center;
             }
 
-            .btnStyle:hover{background-color: #00008B;}
+            .btnStyle:hover{
+                text-decoration-line: underline;
+                text-decoration-color: white;
+                text-decoration-thickness: 2.5px;
+            }
 
             .underline{ 
                 text-decoration-line: underline;
@@ -161,32 +170,32 @@
         <!-- BUTTONS -->
         <div class="buttons">
             <div class="btnhome btnStyle" grid-area="home">
-                <button type="button" class="btn btn-dark" onClick="home()">
+                <button type="button" class="btn btn-dark btnStyle" onClick="home()">
                     HOME
                 </button>
             </div>
             <div class="btnabout btnStyle" grid-area="about">
-                <button type="button" class="btn btn-dark" onClick="about()">
+                <button type="button" class="btn btn-dark btnStyle" onClick="about()">
                     ABOUT
                 </button>
             </div>
             <div class="btnresume btnStyle" grid-area="resume">
-                <button type="button" class="btn btn-dark" onClick="resume()">
+                <button type="button" class="btn btn-dark btnStyle" onClick="resume()">
                     RESUME
                 </button>
             </div>
             <div class="btnportfolio btnStyle" grid-area="portfolio">
-                <button type="button" class="btn btn-dark" onClick="resume()">
+                <button type="button" class="btn btn-dark btnStyle" onClick="resume()">
                     PORTFOLIO
                 </button>
             </div>
             <div class="btnprojects btnStyle" grid-area="projects">
-                <button type="button" class="btn btn-dark" onClick="projects()">
+                <button type="button" class="btn btn-dark btnStyle" onClick="projects()">
                     PROJECTS
                 </button>
             </div>
             <div class="btncontacts btnStyle" grid-area="contacts">
-                <button type="button" class="btn btn-dark" onClick="contacts()">
+                <button type="button" class="btn btn-dark btnStyle" onClick="contacts()">
                     CONTACTS
                 </button>
             </div>
@@ -264,9 +273,14 @@
         </div>
 
         <!-- RESUME -->
-        <div class="cresume" id="resume">
-
+        <div class="cresume img3 bg-image" id="resume">
+            
             <h1 class="underline" style="text-align: center;"><b>RESUME</b></h1>
+
+            <iframe src="https://docs.google.com/document/d/e/2PACX-1vRnIP_IgweVgObWz6TIFx_GHS-9wKi4AVTa5TMXMWz_BOczw7eu4RTJRou3gJwNLw/pub?embedded=true" 
+                width="1250px" height="800px" style="padding-left: 17%; padding-top: -15%; padding-bottom: -15%;">
+            </iframe>
+
             <a href="MOUSSA_FOFANA_RESUME.docx" download="">
                 <button class="btn-download" style="width:100%"><i class="fa fa-download"></i> Download Resume</button>
             </a>
