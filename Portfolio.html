@@ -127,17 +127,18 @@
                 text-decoration-line: underline;
                 text-decoration-color: white;
                 text-decoration-thickness: 2.5px;
+                text-underline-offset: 8px;
             }
 
             .underline{ 
                 text-decoration-line: underline;
-                text-decoration-color: Blue;
+                text-decoration-color: purple;
                 text-decoration-thickness: 10px;
             }
 
             /* Style buttons */
             .btn-download {
-            background-color: DodgerBlue;
+            background-color: purple;
             border: none;
             color: white;
             padding: 12px 30px;
@@ -153,11 +154,28 @@
             .btnsubmit:hover{border-color: gray;}
 
             footer{
-                background-color: blue;
+                background-color: purple;
                 padding-bottom: 20px;
+                color: white;
             } 
 
             .copyright{padding-left: 35%;}
+
+            #projects{
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-template-rows: 1fr 2fr;
+                gap: 20px;
+            }
+
+            .projects{
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 1fr 1fr;
+                gap: 20px;
+            }
+
+
 
         </style>
 
@@ -203,7 +221,7 @@
 
         <!-- HOME -->
         <div class="chome" id="home">
-            <img src="pic1.jpg" alt="Home picture bacground">
+            <img src="pic11.jpg" alt="Home picture bacground">
 
         </div>
 
@@ -246,27 +264,27 @@
         
                     <h5>HTML</h4>
                         <div class="w3-light-grey w3-round-xlarge">
-                            <div class="w3-container w3-blue w3-round-xlarge" style="width:95%">95%</div>
+                            <div class="w3-container w3-purple w3-round-xlarge" style="width:95%">95%</div>
                         </div>
 
                     <h5>CSS</h4>
                         <div class="w3-light-grey w3-round-xlarge">
-                            <div class="w3-container w3-blue w3-round-xlarge" style="width:95%">95%</div>
+                            <div class="w3-container w3-purple w3-round-xlarge" style="width:95%">95%</div>
                         </div>
 
                     <h5>JAVASCRIPT</h4>
                         <div class="w3-light-grey w3-round-xlarge">
-                            <div class="w3-container w3-blue w3-round-xlarge" style="width:75%">75%</div>
+                            <div class="w3-container w3-purple w3-round-xlarge" style="width:75%">75%</div>
                         </div>
 
                     <h5>PYTHON</h4>
                         <div class="w3-light-grey w3-round-xlarge">
-                            <div class="w3-container w3-blue w3-round-xlarge" style="width:75%">75%</div>
+                            <div class="w3-container w3-purple w3-round-xlarge" style="width:75%">75%</div>
                         </div>
 
                     <h5>C#/C++</h4>
                         <div class="w3-light-grey w3-round-xlarge">
-                            <div class="w3-container w3-blue w3-round-xlarge" style="width:75%">75%</div>
+                            <div class="w3-container w3-purple w3-round-xlarge" style="width:75%">75%</div>
                         </div>
                 </div>
             </div>
@@ -278,7 +296,7 @@
             <h1 class="underline" style="text-align: center;"><b>RESUME</b></h1>
 
             <iframe src="https://docs.google.com/document/d/e/2PACX-1vRnIP_IgweVgObWz6TIFx_GHS-9wKi4AVTa5TMXMWz_BOczw7eu4RTJRou3gJwNLw/pub?embedded=true" 
-                width="1250px" height="800px" style="padding-left: 17%; padding-top: -15%; padding-bottom: -15%;">
+                width="1250px" height="800px" style="padding-left: 17%;">
             </iframe>
 
             <a href="MOUSSA_FOFANA_RESUME.docx" download="">
@@ -302,6 +320,25 @@
         <div class="cprojects img5 bg-image" id="projects">
 
             <h1 class="underline" style="text-align: center;"><b>PROJECTS</b></h1>
+
+            <div class="projects">
+                <div class="project1">
+
+                </div>
+
+                <div class="project2">
+                    
+                </div>
+
+                <div class="project3">
+                    
+                </div>
+
+                <div class="project4">
+                    
+                </div>
+
+            </div>
 
         </div>
         
@@ -334,7 +371,7 @@
                         </div>
                         <br>
                         <div style="padding-left: 35%;">
-                            <button type="submit" class="btn btn-primary btnsubmit" style="height: 50px; width: 125px;">
+                            <button type="submit" class="btn btn-primary btnsubmit" style="height: 50px; width: 125px; background-color: purple;">
                                 <h4>Submit</h4>
                             </button>
                         </div>
